@@ -4,7 +4,7 @@ author: Sat Naing
 pubDatetime: 2023-07-21T10:11:06.130Z
 postSlug: how-to-add-estimated-reading-time
 featured: false
-draft: false
+draft: true
 tags:
   - FAQ
 description: How you can add an 'Reading time' in your blog posts of AstroPaper.
@@ -127,7 +127,7 @@ const getPostsWithRT = async (posts: CollectionEntry<"blog">[]) => {
 export default getPostsWithRT;
 ```
 
-Step (6) Refactor `getStaticPaths` of `/src/pages/posts/[slug].astro` as the following
+Step (6) Refactor `getStaticPaths` of `/src/pages/wpisy/[slug].astro` as the following
 
 ```ts
 ---
@@ -200,9 +200,9 @@ Step (2) Make sure to refactor every file which uses `getSortedPosts` function. 
 Files that use `getSortedPosts` function are as follow
 
 - src/pages/index.astro
-- src/pages/posts/index.astro
+- src/pages/wpisy/index.astro
 - src/pages/rss.xml.ts
-- src/pages/posts/[slug].astro
+- src/pages/wpisy/[slug].astro
 
 All you have to do is like this
 

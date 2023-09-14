@@ -4,7 +4,7 @@ pubDatetime: 2022-09-26T12:13:24Z
 title: Predefined color schemes
 postSlug: predefined-color-schemes
 featured: false
-draft: false
+draft: true
 tags:
   - color-schemes
 ogImage: ""
@@ -15,7 +15,7 @@ description:
 
 I've crafted some predefined color schemes for this AstroPaper blog theme. You can replace these color schemes with the original ones.
 
-If you don't know how you can configure color schemes, check [this blog post](https://astro-paper.pages.dev/posts/customizing-astropaper-theme-color-schemes/).
+If you don't know how you can configure color schemes, check [this blog post](https://astro-paper.pages.dev/wpisy/customizing-astropaper-theme-color-schemes/).
 
 ## Table of contents
 

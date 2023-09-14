@@ -4,7 +4,7 @@ pubDatetime: 2022-09-23T04:58:53Z
 title: How to configure AstroPaper theme
 postSlug: how-to-configure-astropaper-theme
 featured: true
-draft: false
+draft: true
 tags:
   - configuration
   - docs
@@ -162,4 +162,4 @@ linkTitle: `Follow ${SITE.title} on Twitter`;
 
 ## Conclusion
 
-This is the brief specification of how you can customize this theme. You can customize more if you know some coding. For customizing styles, please read [this article](https://astro-paper.pages.dev/posts/customizing-astropaper-theme-color-schemes/). Thanks for reading.✌🏻
+This is the brief specification of how you can customize this theme. You can customize more if you know some coding. For customizing styles, please read [this article](https://astro-paper.pages.dev/wpisy/customizing-astropaper-theme-color-schemes/). Thanks for reading.✌🏻

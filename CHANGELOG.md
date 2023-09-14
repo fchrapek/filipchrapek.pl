@@ -60,7 +60,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### ⚠ BREAKING CHANGES
 
-Check the AstroPaper v2 in [this blog post](https://astro-paper.pages.dev/posts/astro-paper-2/)
+Check the AstroPaper v2 in [this blog post](https://astro-paper.pages.dev/wpisy/astro-paper-2/)
 
 * **deps:** Migration of Astro to version 2
 

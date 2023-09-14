@@ -13,7 +13,8 @@ export interface Props {
 
 const { post } = Astro.props;
 
-const { title, author, description, ogImage, canonicalURL, pubDatetime, tags } = post.data;
+const { title, author, description, ogImage, canonicalURL, pubDatetime, tags } =
+  post.data;
 
 const { Content } = await post.render();
 
@@ -21,7 +22,13 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   .href;
 ---
 
-<Layout title={title} author={author} description={description} ogImage={ogUrl} canonicalURL={canonicalURL}>
+<Layout
+  title={title}
+  author={author}
+  description={description}
+  ogImage={ogUrl}
+  canonicalURL={canonicalURL}
+>
   <Header />
   <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
     <button
@@ -32,7 +39,7 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
         ><path
           d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
         ></path>
-      </svg><span>Go back</span>
+      </svg><span>Wróć</span>
     </button>
   </div>
   <main id="main-content">
