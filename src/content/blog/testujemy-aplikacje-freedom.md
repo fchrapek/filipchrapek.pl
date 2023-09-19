@@ -17,6 +17,19 @@ O ile bardzo fajnie jest się chwalić takim osiągnięciem przed rodziną, znaj
 
 Tylko co zrobić jeśli obok nie siedzi Jocko Willing, który niczym Sierżant Harmant w Full Metal Jacket drze na Ciebie japę, że dyscyplina to klucz do wolności? No nie wiem, możesz np. założyć konto na **<a href="https://freedom.to/" target="_blank">Freedom</a>**.
 
+<figure>
+  <img
+	src="https://media3.giphy.com/media/d85cpqCrfj8bWVLb2S/giphy.gif?cid=ecf05e4726bl9ygvs4tbhsawoykro04akq4fteg7elpfgcnv&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+	alt="Jocko Willing drący japę"
+	width="100%"
+	height="auto"
+>
+
+  <figcaption>
+	Jocko Willing, kiedy mu powiesz, że wstałeś o 4 rano i przebiegłeś półmaraton na bosaka z hantlem 24 kg zawieszonym na szyi
+  </figcaption>
+</figure>
+
 ## Table of contents
 
 ## Potrzeba
