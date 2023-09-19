@@ -20,6 +20,18 @@
     --color-card-muted: 138, 51, 2;
     --color-border: 171, 75, 8;
   }
+
+  #logo {
+    @apply h-14 w-10;
+  }
+
+  @media (min-width: 500px) {
+    #logo {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
     display: none;

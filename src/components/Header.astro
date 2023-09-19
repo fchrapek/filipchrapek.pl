@@ -3,8 +3,7 @@ import { LOGO_IMAGE, SITE } from "@config";
 import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
-import logoPNG from "/assets/logo.png";
-import logoSVG from "/assets/logo.svg";
+import logoSVG from "/assets/logo.svg?raw";
 
 export interface Props {
   activeNav?: "posts" | "tags" | "about" | "search";
@@ -18,18 +17,7 @@ const { activeNav } = Astro.props;
   <div class="nav-container">
     <div class="top-nav-wrap">
       <a href="/" class="logo">
-        {
-          LOGO_IMAGE.enable ? (
-            <img
-              src={LOGO_IMAGE.svg ? logoSVG : logoPNG}
-              alt="AstroPaper Logo"
-              width={LOGO_IMAGE.width}
-              height={LOGO_IMAGE.height}
-            />
-          ) : (
-            SITE.title
-          )
-        }
+        {LOGO_IMAGE.enable ? <Fragment set:html={logoSVG} /> : SITE.title}
       </a>
       <nav id="nav-menu">
         <button
@@ -124,7 +112,7 @@ const { activeNav } = Astro.props;
     @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;
   }
   .logo {
-    @apply absolute flex-shrink-0 py-1 text-xl font-semibold sm:static sm:text-2xl;
+    @apply absolute -mt-3 flex-shrink-0 py-1 text-xl font-semibold sm:static sm:text-2xl;
   }
   .hamburger-menu {
     @apply self-end p-2 sm:hidden;

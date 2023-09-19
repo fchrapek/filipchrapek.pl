@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Filip Chrapek",
   desc: "Blog o freelancingu, produktywności, kodowaniu i designie",
   title: "Filip Chrapek",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "",
   lightAndDarkMode: true,
   postPerPage: 3,
 };
@@ -13,10 +13,10 @@ export const SITE: Site = {
 export const LOCALE = ["pl-PL"]; // set to [] to use the environment default
 
 export const LOGO_IMAGE = {
-  enable: false,
+  enable: true,
   svg: true,
-  width: 216,
-  height: 46,
+  // width: 46,
+  // height: 46,
 };
 
 export const SOCIALS: SocialObjects = [
