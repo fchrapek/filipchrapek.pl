@@ -1,10 +1,10 @@
 ---
 author: Filip Chrapek
-pubDatetime: 2023-09-14T15:57:52.737Z
+pubDatetime: 2023-09-14
 title: Poprzez dyscyplinę do wolności — testujemy Freedom
 postSlug: testujemy-aplikacje-freedom
-featured: true
-ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+featured: false
+ogImage: ""
 tags:
   - produktywność
 description: Ultra proste, cross-platformowe i wygodne lekarstwo dla profesjonalnych odkładaczy-na-później.
@@ -15,7 +15,7 @@ No dobra, nie wiem, czy w światowej, ale w powiatowej minimum.
 
 O ile bardzo fajnie jest się chwalić takim osiągnięciem przed rodziną, znajomymi czy potencjalnym pracodawcą, a będąc członkiem kapituły ludzi-odkłądających-na-później często dostaję np. kupony do Maka, o tyle czasem przyjemnie byłoby odfajkowac przynajmniej jedno zadanie z niekończącej się to-do listy.
 
-Tylko co zrobić jeśli obok nie siedzi Jocko Willing, który niczym Sierżant Harmant w Full Metal Jacket drze na Ciebie japę, że dyscyplina to klucz do wolności? No nie wiem, możesz np. założyć konto na **<a href="https://freedom.to/" target="_blank">Freedom</a>**.
+Tylko co zrobić jeśli obok nie siedzi Jocko Willing, który niczym Sierżant Harmant w Full Metal Jacket drze na Ciebie japę, że dyscyplina to klucz do wolności? No nie wiem, możesz np. założyć konto na **<a href="freedom.sjv.io/Wq9dYn" target="_blank">Freedom</a>**.
 
 <figure>
   <img
@@ -57,3 +57,8 @@ No i co — tyle i aż tyle. Teraz mój workflow wygląda tak, że mam przygotow
 ## Dobre, bo płatne
 
 Aha, Freedom jest płatny, ale oferuje 7-dniowy trial. Natomiast wersja premium na rok (po wszystkich zniżkach na start) kosztuje coś w okolicach 30 dolarów, więc moim zdaniem jest to jak najbardziej akceptowalne (ogólnie jeśli tak jak ja kiedyś, masz problem z korzystaniem z płatnych rozwiązań, to o ile nie głodujesz, polecam spróbować się przemóc i czasem wyjąć portfel, bo różnica w jakości czasem jest ooooogromna 🙂).
+
+## Linki
+
+- Załóż konto: <a href="freedom.sjv.io/Wq9dYn" target="_blank">Freedom</a> (link afiliacyjny)
+- Sprawdź <a href="https://freedom.to/upgrade" target="_blank">Cennik i QA</a>
