@@ -60,5 +60,5 @@ Aha, Freedom jest płatny, ale oferuje 7-dniowy trial. Natomiast wersja premium 
 
 ## Linki
 
-- Załóż konto: <a href="freedom.sjv.io/Wq9dYn" target="_blank">Freedom</a> (link afiliacyjny)
+- Załóż konto: <a href="https://freedom.sjv.io/Wq9dYn" target="_blank">Freedom</a> (link afiliacyjny)
 - Sprawdź <a href="https://freedom.to/upgrade" target="_blank">Cennik i QA</a>
