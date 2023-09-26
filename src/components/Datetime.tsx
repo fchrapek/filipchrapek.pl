@@ -10,6 +10,7 @@ export default function Datetime({ datetime, size = "sm", className }: Props) {
   return (
     <div className={`flex items-center space-x-2 opacity-50 ${className}`}>
       <svg
+        id="calendar"
         xmlns="http://www.w3.org/2000/svg"
         className={`${
           size === "sm" ? "scale-90" : "scale-100"

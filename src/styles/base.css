@@ -29,7 +29,7 @@
     display: block;
   }
   body {
-    @apply flex min-h-screen flex-col bg-skin-fill font-mono text-skin-base
+    @apply font-sans flex min-h-screen flex-col bg-skin-fill text-skin-base
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   }
   section,
@@ -43,8 +43,11 @@
   svg {
     @apply inline-block h-6 w-6 fill-skin-base group-hover:fill-skin-accent;
   }
+  svg#calendar {
+    @apply group-hover:fill-skin-base;
+  }
   svg#logo {
-    @apply w-14 h-14 -my-4 sm:w-20 sm:h-20;
+    @apply -my-4 h-14 w-14 sm:h-20 sm:w-20;
   }
   svg.icon-tabler {
     @apply inline-block h-6 w-6 scale-125 fill-transparent
@@ -135,4 +138,20 @@
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
+}
+
+@font-face {
+  font-family: "Biennale";
+  src: url("/fonts//Biennale-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Biennale";
+  src: url("/fonts//Biennale-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
