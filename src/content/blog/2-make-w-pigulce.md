@@ -6,7 +6,7 @@ postSlug: Make opis platformy
 featured: false
 draft: false
 tags:
-  - produktywność
+  - produktywnosc
   - automatyzacja
 description: "Opis"
 ---

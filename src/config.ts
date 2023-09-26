@@ -7,9 +7,10 @@ export const SITE: Site = {
   title: "Filip Chrapek",
   ogImage: "",
   lightAndDarkMode: true,
-  postPerPage: 3,
+  postPerPage: 6,
 };
 
+export const LANG = "pl";
 export const LOCALE = ["pl-PL"]; // set to [] to use the environment default
 
 export const LOGO_IMAGE = {

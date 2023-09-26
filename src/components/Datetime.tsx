@@ -8,7 +8,7 @@ export interface Props {
 
 export default function Datetime({ datetime, size = "sm", className }: Props) {
   return (
-    <div className={`flex items-center space-x-2 opacity-80 ${className}`}>
+    <div className={`flex items-center space-x-2 opacity-50 ${className}`}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className={`${
@@ -44,9 +44,9 @@ const FormattedDatetime = ({ datetime }: { datetime: string | Date }) => {
   return (
     <>
       {date}
-      <span aria-hidden="true"> | </span>
+      {/* <span aria-hidden="true"> | </span>
       <span className="sr-only">&nbsp;at&nbsp;</span>
-      {time}
+      {time} */}
     </>
   );
 };
