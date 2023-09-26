@@ -6,7 +6,7 @@ pubDatetime: 2023-09-12
 featured: false
 draft: false
 tags:
-  - produktywność
+  - produktywnosc
   - automatyzacja
   - api
   - infakt

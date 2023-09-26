@@ -6,7 +6,7 @@ postSlug: testujemy-aplikacje-freedom
 featured: false
 ogImage: ""
 tags:
-  - produktywność
+  - produktywnosc
 description: Ultra proste, cross-platformowe i wygodne lekarstwo dla profesjonalnych odkładaczy-na-później.
 ---
 

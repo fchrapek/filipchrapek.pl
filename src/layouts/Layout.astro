@@ -1,9 +1,9 @@
 ---
-import { SITE } from "@config";
+import { SITE, LANG } from "@config";
 import "@styles/base.css";
+import { ViewTransitions } from "astro:transitions";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
-const impactVerification = import.meta.env.PUBLIC_IMPACT_SITE_VERIFICATION;
 
 export interface Props {
   title?: string;
@@ -22,13 +22,13 @@ const {
 } = Astro.props;
 
 const socialImageURL = new URL(
-  ogImage ? ogImage : SITE.ogImage,
+  ogImage ?? SITE.ogImage ?? "og.png",
   Astro.url.origin
 ).href;
 ---
 
-<!DOCTYPE html>
-<html lang="pl">
+<!doctype html>
+<html lang={LANG}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -56,6 +56,16 @@ const socialImageURL = new URL(
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="theme-color" content="" />
+
     {
       // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
       // include google-site-verification tag in the heading
@@ -68,10 +78,7 @@ const socialImageURL = new URL(
       )
     }
 
-    <meta
-      name="impact-site-verification"
-      content="1237158e-f677-4785-a6d4-07850cdfaa79"
-    />
+    <ViewTransitions />
 
     <script is:inline src="/toggle-theme.js"></script>
   </head>

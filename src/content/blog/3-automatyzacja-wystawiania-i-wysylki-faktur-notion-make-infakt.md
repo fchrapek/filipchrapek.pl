@@ -6,7 +6,7 @@ postSlug: automatyzacja-wystawiania-i-wysylki-faktur-notion-infakt-make
 featured: true
 draft: false
 tags:
-  - produktywność
+  - produktywnosc
   - automatyzacja
 description: "Opis"
 ---
