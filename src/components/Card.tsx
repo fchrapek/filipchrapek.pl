@@ -17,7 +17,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
   };
 
   return (
-    <li className="my-6 sm:my-8">
+    <li className="my-6 sm:my-10">
       <a
         href={href}
         className="group mb-1 inline-block font-medium decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"

@@ -10,6 +10,7 @@ import getPostsByTag from "@utils/getPostsByTag";
 import slugify from "@utils/slugify";
 import { SITE } from "@config";
 import getSortedPosts from "@utils/getSortedPosts";
+import { strings, slugs } from "@content/content";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -49,7 +50,7 @@ const sortTagsPost = getSortedPosts(tagPosts);
     <ul>
       {
         sortTagsPost.map(({ data }) => (
-          <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
+          <Card href={`/${slugs.posts}/${slugify(data)}`} frontmatter={data} />
         ))
       }
     </ul>

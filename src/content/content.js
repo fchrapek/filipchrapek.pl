@@ -1,8 +1,8 @@
 export const strings = {
   global: {
     posts: "Wpisy",
-    featured: "Wyróżnione",
-    recentPost: "Najnowsze",
+    featured: "Wyróżnione ✨",
+    recentPost: "Najnowsze 🔥",
     allPosts: "Wszystkie wpisy",
     about: "O mnie",
     skipToContent: "Przejdź do treści",
@@ -26,7 +26,7 @@ export const strings = {
 
 export const slugs = {
   posts: "wpisy",
-  tags: "kategorie",
+  tags: "kategoria",
   about: "o-mnie",
   search: "wyszukiwarka",
 };
