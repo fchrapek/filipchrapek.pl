@@ -6,7 +6,7 @@ import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
-import { strings, slugs } from '@content/content';
+import { strings, slugs } from "@content/content";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -65,7 +65,7 @@ const ogUrl = new URL(
     @apply mx-auto w-full max-w-3xl px-4 pb-12;
   }
   .post-title {
-    @apply text-2xl sm:text-3xl font-semibold;
+    @apply text-2xl font-semibold sm:text-3xl;
   }
   .tags-container {
     @apply my-8;
