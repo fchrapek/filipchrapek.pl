@@ -4,25 +4,31 @@ import react from "@astrojs/react";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
+import mdx from "@astrojs/mdx";
+
+
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-paper.pages.dev/", // replace this with your deployed domain
+  site: "https://astro-paper.pages.dev/",
+  // replace this with your deployed domain
   integrations: [
     tailwind({
       applyBaseStyles: false,
     }),
     react(),
     sitemap(),
+    mdx({
+      extendMarkdownConfig: true,
+      optimize: true,
+    }),
   ],
   markdown: {
     remarkPlugins: [
-      remarkToc,
+      [remarkToc, { heading: "Spis treści" }],
       [
         remarkCollapse,
-        {
-          test: "Table of contents",
-        },
+        { test: "Spis treści", summary: "Otwórz spis treści" },
       ],
     ],
     shikiConfig: {

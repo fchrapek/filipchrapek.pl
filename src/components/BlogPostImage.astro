@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+
+export interface Props {
+  src: string;
+  alt?: string;
+  className?: string;
+  figcaption?: string;
+}
+
+const { src, alt, className, figcaption } = Astro.props;
+---
+
+<figure class="blog-post-wrapper">
+  <Image src={src} width="480" alt={alt} class={className} />
+
+  <figcaption>
+    {figcaption}
+  </figcaption>
+</figure>
+
+<style>
+  .blog-post-wrapper {
+    @apply mx-auto max-w-[30rem] text-center sm:!my-12;
+  }
+</style>
