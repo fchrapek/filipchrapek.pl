@@ -2,7 +2,7 @@
 import { LOGO_IMAGE, SITE } from "@config";
 import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
-import {strings, slugs} from '@content/content';
+import { strings, slugs } from "@content/content";
 
 import logoSVG from "/assets/logo.svg?raw";
 
@@ -14,10 +14,12 @@ const { activeNav } = Astro.props;
 ---
 
 <header>
-  <a id="skip-to-content" href="#main-content">{strings.global.skipToContent}</a>
+  <a id="skip-to-content" href="#main-content">
+    {strings.global.skipToContent}
+  </a>
   <div class="nav-container">
     <div class="top-nav-wrap">
-      <a href="/" class="logo">
+      <a href="/" title="logo" class="logo">
         {LOGO_IMAGE.enable ? <Fragment set:html={logoSVG} /> : SITE.title}
       </a>
       <nav id="nav-menu">
@@ -48,13 +50,19 @@ const { activeNav } = Astro.props;
         </button>
         <ul id="menu-items" class="display-none sm:flex">
           <li>
-            <a href={`/${slugs.posts}`} class={activeNav === "posts" ? "active" : ""}>
+            <a
+              href={`/${slugs.posts}`}
+              class={activeNav === "posts" ? "active" : ""}
+            >
               {strings.global.posts}
             </a>
           </li>
           <li>
-            <a href={`/${slugs.about}`} class={activeNav === "about" ? "active" : ""}>
-               {strings.global.about}
+            <a
+              href={`/${slugs.about}`}
+              class={activeNav === "about" ? "active" : ""}
+            >
+              {strings.global.about}
             </a>
           </li>
           <li>
