@@ -172,6 +172,6 @@
   font-display: swap;
 }
 
-.callout * {
-  @apply opacity-75 first:mt-0 last:mb-0;
+.callout p {
+  @apply opacity-80 first:mt-0 last:mb-0;
 }
