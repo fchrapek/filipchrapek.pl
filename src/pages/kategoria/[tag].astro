@@ -39,14 +39,14 @@ const tagPosts = getPostsByTag(posts, tag);
 const sortTagsPost = getSortedPosts(tagPosts);
 ---
 
-<Layout title={`Tag:${tag} | ${SITE.title}`}>
+<Layout title={`${strings.global.tag}:${tag} | ${SITE.title}`}>
   <Header activeNav="tags" />
   <Main
-    pageTitle={[`Tag:`, `${tag}`]}
+    pageTitle={[`${strings.global.tag}:`, `${tag}`]}
     titleTransition={tag}
-    pageDesc={`All the articles with the tag "${tag}".`}
+    pageDesc={`${strings.global.allTags}: "${tag}".`}
   >
-    <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
+    <h1 slot="title" transition:name={tag}>{`${strings.global.tag}:${tag}`}</h1>
     <ul>
       {
         sortTagsPost.map(({ data }) => (

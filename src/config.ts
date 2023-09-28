@@ -3,9 +3,9 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://filipchrapek.pl/",
   author: "Filip Chrapek",
-  desc: "Blog o freelancingu, produktywności, kodowaniu i designie",
+  desc: "Promuję freelance zrównoważony, który pozwala skutecznie realizować się w tym trybie długoterminowo, z poszanowaniem siebie i swoich klientów",
   title: "Filip Chrapek",
-  ogImage: "",
+  ogImage: "og-image.png",
   lightAndDarkMode: true,
   postPerPage: 6,
 };

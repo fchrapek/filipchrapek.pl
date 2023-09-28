@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: "O mnie"
 ---
 
-Samouk-wszystkoogarniacz, osoba zaciekawiona.
+Freelancer, samouk-wszystkoogarniacz, osoba zaciekawiona.
 
 Jeśli widzę w czymś wartość, to staram się tym dzielić i robić to na tyle przyzwoicie, żeby móc spojrzeć sobie w oczy i spać spokojnie.
 

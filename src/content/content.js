@@ -5,6 +5,8 @@ export const strings = {
     recentPost: "Najnowsze 🔥",
     allPosts: "Wszystkie wpisy",
     about: "O mnie",
+    tag: "Kategoria",
+    allTags: "Wszystkie wpisy o kategorii",
     skipToContent: "Przejdź do treści",
     search: "Szukaj",
     goBack: "Powrót",
@@ -12,9 +14,11 @@ export const strings = {
     prev: "Starsze",
   },
   homepage: {
-    heading: "Freelancing powoli",
-    description:
-      "Hej👋 Jestem Filip, lubię pracować jako wolny strzelec, a to myślodsiewnia wszystkiego, co w danym momencie mnie interesuje. Strzelam (huh), że zazwyczaj będzie to kod, design i szeroko pojęta produktywność.",
+    heading: "freelance powoli",
+    descriptionFirst:
+      "Hej👋 Jestem Filip i lubię pracować jako wolny strzelec. Promuję freelance zrównoważony, który pozwala skutecznie realizować się w tym trybie długoterminowo, z poszanowaniem siebie i swoich klientów.",
+    descriptionSecond:
+      "Ten blog to myślodsiewnia wszystkiego, co w danym momencie mnie interesuje. Strzelam, że zazwyczaj będzie to kod, design i szeroko pojęta  produktywność.",
     socials: "Socials:",
   },
   search: {
