@@ -18,18 +18,18 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
   };
 
   return (
-    <li className="my-6 sm:my-14 last-of-type:my-2 sm:last-of-type:my-5">
+    <li className="my-8 sm:my-14 last-of-type:my-2 sm:last-of-type:my-5">
       <a
         href={href}
         className="group grid grid-cols-6 gap-4 sm:gap-6 decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
       >
-        <div className="grid place-content-center col-span-4" >
+        <div className="grid place-content-center justify-start col-span-4" >
           {secHeading ? (
             <h2 {...headerProps}>{title}</h2>
           ) : (
             <h3 {...headerProps}>{title}</h3>
           )}
-          <p className="hidden sm:webkit-box mb-4 line-clamp-2 text-skin-secondary">{description}</p>
+          <p className="smMax:hidden mb-4 line-clamp-2 text-skin-secondary">{description}</p>
           <Datetime datetime={pubDatetime} readingTime={readingTime} />
         </div>
           
