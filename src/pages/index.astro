@@ -43,7 +43,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
       <p>{strings.homepage.descriptionFirst}</p>
 
-      <p>{strings.homepage.descriptionSecond}</p>
+      <!-- <p>{strings.homepage.descriptionSecond}</p> -->
 
       {
         // only display if at least one social link is enabled
@@ -127,7 +127,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
   }
   #hero p {
-    @apply my-2;
+    @apply my-2 text-skin-secondary;
   }
   .social-wrapper {
     @apply mt-4 flex flex-col sm:flex-row sm:items-center;
@@ -143,7 +143,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   }
   #featured h2,
   #recent-posts h2 {
-    @apply text-2xl font-semibold tracking-wide;
+    @apply text-xl sm:mb-10;
   }
   .all-posts-btn-wrapper {
     @apply my-8 text-center;

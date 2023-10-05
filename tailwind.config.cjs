@@ -24,6 +24,7 @@ module.exports = {
     textColor: {
       skin: {
         base: withOpacity("--color-text-base"),
+        secondary: withOpacity("--color-text-secondary"),
         accent: withOpacity("--color-accent"),
         inverted: withOpacity("--color-fill"),
       },
@@ -57,7 +58,7 @@ module.exports = {
       transparent: "transparent",
     },
     fontFamily: {
-      sans: ["Biennale", "sans-serif"],
+      sans: ["DMSans", "sans-serif"],
     },
     // },
   },

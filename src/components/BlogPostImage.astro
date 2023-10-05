@@ -12,7 +12,7 @@ const { src, alt, className, figcaption } = Astro.props;
 ---
 
 <figure class="blog-post-wrapper">
-  <Image src={src} width="480" alt={alt} class={className} />
+  <Image src={src} alt={alt} class={className} />
 
   <figcaption>
     {figcaption}
@@ -21,6 +21,6 @@ const { src, alt, className, figcaption } = Astro.props;
 
 <style>
   .blog-post-wrapper {
-    @apply mx-auto max-w-[30rem] text-center sm:!my-12;
+    @apply mx-auto text-center sm:!my-12;
   }
 </style>
