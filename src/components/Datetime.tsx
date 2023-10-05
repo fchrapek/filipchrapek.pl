@@ -8,7 +8,7 @@ export interface Props {
 
 export default function Datetime({ datetime, size = "sm", className }: Props) {
   return (
-    <div className={`flex items-center space-x-2 opacity-50 ${className}`}>
+    <div className={`flex items-center space-x-2 text-skin-secondary ${className}`}>
       <svg
         id="calendar"
         xmlns="http://www.w3.org/2000/svg"
