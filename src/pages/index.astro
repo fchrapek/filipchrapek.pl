@@ -14,7 +14,7 @@ import { strings, slugs } from "@content/content";
 
 const posts = await getCollection("blog");
 
-const sortedPosts = getSortedPosts(posts);
+const sortedPosts = await getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
@@ -139,11 +139,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   /* ===== Featured & Recent Posts Sections ===== */
   #featured,
   #recent-posts {
-    @apply pb-6 pt-12;
+    @apply pb-6 pt-6 sm:pt-12;
   }
   #featured h2,
   #recent-posts h2 {
-    @apply text-xl sm:mb-10;
+    @apply text-xl mb-8 sm:mb-10;
   }
   .all-posts-btn-wrapper {
     @apply my-8 text-center;
