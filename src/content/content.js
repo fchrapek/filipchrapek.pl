@@ -12,6 +12,7 @@ export const strings = {
     goBack: "Powrót",
     next: "Nowsze",
     prev: "Starsze",
+    postedOn: "Opublikowano"
   },
   homepage: {
     heading: "freelance powoli",
@@ -26,6 +27,14 @@ export const strings = {
     searchAnyArticle: "Czego szukasz?",
     searchForAnythig: "Wpisz wyszukiwaną frazę...",
   },
+  notFound: {
+    pageNotFound: "Niczego tutaj nie ma :(",
+    goBackHome: "Wróć do strony głównej"
+  },
+  blogPost: {
+    tableOfContents: "Spis treści",
+    openTableOfContents: "Otwórz spis treści",
+  }
 };
 
 export const slugs = {
