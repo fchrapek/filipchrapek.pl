@@ -36,7 +36,7 @@
   }
   section,
   footer {
-    @apply mx-auto max-w-[42rem] px-4;
+    @apply mx-auto max-w-[43rem] px-4;
   }
   h1, h2{
     @apply tracking-tighter;
@@ -64,10 +64,10 @@
   }
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base
-    prose-p:!text-skin-base
+    prose-p:!text-skin-base sm:prose-p:!text-lg prose-p:!text-[#595959]
     prose-a:!text-skin-base prose-a:!decoration-dashed prose-a:underline-offset-8
     hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent
-    prose-blockquote:border-opacity-50 prose-blockquote:opacity-80
+    prose-blockquote:!font-normal 
     prose-figcaption:!text-skin-base prose-figcaption:opacity-70
     prose-strong:!text-skin-base
 
@@ -147,38 +147,6 @@
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
 }
-
-/* @font-face {
-  font-family: "Biennale";
-  src: url("/fonts/Biennale-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Biennale";
-  src: url("/fonts/Biennale-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Biennale";
-  src: url("/fonts/Biennale-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Biennale";
-  src: url("/fonts/Biennale-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-} */
 
 @font-face {
   font-family: "DMSans";
