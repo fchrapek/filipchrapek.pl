@@ -14,7 +14,7 @@
     --color-border: 247, 215, 173;
   }
   html[data-theme="dark"] {
-    --color-fill: 33, 39, 55;
+    --color-fill: 33, 31, 27;
     --color-text-base: 234, 237, 243;
     --color-text-secondary: 173, 173, 173;
     --color-accent: 247, 215, 173;
@@ -43,6 +43,9 @@
   }
   h3, h4, h5 {
     @apply tracking-tight;
+  }
+  h4 {
+    @apply sm:text-lg
   }
   a {
     @apply outline-2 outline-offset-1 outline-skin-fill
@@ -75,8 +78,8 @@
     prose-code:rounded prose-code:bg-skin-card
     prose-code:bg-opacity-75 prose-code:p-1 prose-code:!text-skin-base
     prose-code:before:!content-[''] prose-code:after:!content-['']
-    prose-pre:!text-skin-base prose-ol:!text-skin-base
-    prose-ul:overflow-x-clip prose-ul:!text-skin-base prose-li:marker:!text-skin-base
+    prose-pre:!text-skin-base prose-ol:!text-skin-secondary sm:prose-ol:!text-lg
+    prose-ul:overflow-x-clip prose-ul:!text-skin-secondary sm:prose-ul:!text-lg prose-li:marker:!text-skin-base
     prose-table:text-skin-base prose-th:border
     prose-th:border-skin-line prose-td:border
     prose-td:border-skin-line prose-img:mx-auto
@@ -98,7 +101,7 @@
     @apply inline-block cursor-pointer select-none text-skin-base;
   }
   .prose summary {
-    @apply focus-outline;
+    @apply focus-outline sm:text-lg;
   }
   .prose h2#table-of-contents + p {
     @apply hidden;

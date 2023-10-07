@@ -29,13 +29,13 @@ import makeNotionUpdateDatabase from "../../assets/images/4/make-notion-update-d
 
 I oto nastał ten czas... Właśnie dzwon wybił po raz trzydziesty. Nieduże stado kruków, z nieznośnym skrzekiem wzbiło się w powietrze, kierując się w stronę ledwo już widocznego zza horyzontu słońca. Okoliczni mieszkańcy pospiesznie chowają się do swoich domostw, skrupulatnie ryglując drzwi i okna. W powietrzu czuć nieprzyjemny zapach potu...
 
-Stało się, nadszedł koniec miesiąca.
+Stało się – nadszedł koniec miesiąca.
 
-Pora przywdziać ciężką, ceremonialną togę, zarzucić ogromny kaptur, zapalić 2 ceremonialne świecie i rozpocząć przerażający rytuał buchalterii.
+Pora przywdziać ciężką, antracytową togę, zarzucić ogromny kaptur, zapalić dwie ceremonialne świecie i rozpocząć przerażający rytuał buchalterii.
 
 ---
 
-Ach biurokracja, ach faktury! Ulubiony temat każdego freelancera, od którego na samą myśl, usta i ręce same składają się do ekstatycznego 'WOOHOO'! 🎉
+Ach biurokracja, ach faktury! Ulubiony temat każdego freelancera, od którego na samą myśl usta i ręce same składają się do ekstatycznego *WOOHOO*! 🎉
 
 <BlogPostImage
   src={woohooRoss}
@@ -59,7 +59,7 @@ _No more!_ Bo, cały na biało (a raczej fioletowo), pojawia się <a href="https
 
 ## Rozwiązanie
 
-Make to cudowny wynalazek. Wciąż odkrywam pełne możliwości tego narzędzia, natomiast już teraz z sukcesem wykorzystuję tę platformę do kilku regularnych czynności, które zaliczam do kategorii _nie chcem, ale muszem_. Jedną z takich czynności jest niewątpliwie wystawianie i wysyłanie faktur, i to właśnie tego byka spróbujemy złapać za rogi.
+Make to cudowny wynalazek. Wciąż odkrywam pełne możliwości tego narzędzia, natomiast już teraz z sukcesem wykorzystuję tę platformę do kilku regularnych czynności, które zaliczam do kategorii _nie chcem, ale muszem_. Jedną z takich czynności jest niewątpliwie wystawianie i wysyłanie faktur, i to właśnie tego byka spróbuję złapać za rogi.
 
 <Callout>
   W przykładzie korzystam z <a href="https://www.notion.so/" target="_blank">Notion</a>, jako dostawcy danych oraz z <a href="https://www.infakt.pl/polecam/fchrapek-infakt" target="_blank">Infaktu</a>, który odpowiedzialny jest za obsługę faktur, ale skupiać będę się głównie na dopięciu całości w Make (a nie na opisie działania wspomnianych platform). W artykule są/będą podlinkowane odpowiednie miejsca, więc jak chcesz, to możesz sprawdzić szczegóły na dany temat.
@@ -149,7 +149,9 @@ Każda nowa baza/strona w Notion dodana po autoryzacji z Make musi być osobno, 
 
 Nawet jeśli aplikacja/platforma nie ma bezpośredniej integracji z Make (tak jest np. w przypadku Notion), to jeśli tylko miejsce, z którym chcę się połączyć udostępnia interfejs API, cały cyfrowy świat stoi przede mną otworem.
 
-Na szczęście Infakt to porządna firma i takimże API dysponuje. _Do komputra!_
+Na szczęście Infakt to porządna firma i takimże API dysponuje.
+
+ _Do komputra!_
 
 #### Wystawienie faktury
 
@@ -157,7 +159,7 @@ Prawy klik i odszukuję moduł **_HTTP_**.
 
 <Callout>
   Na tym etapie musisz mieć wygenerowany klucz API Infaktu. Jeśli jeszcze tego
-  nie zrobiłeś, [tutaj](/wpisy/jak-wygenerować-klucz-api-w-infakt) sprawdzisz
+  nie zrobiłeś, [tutaj](/wpisy/jak-wygenerowac-klucz-api-w-infakt) sprawdzisz
   jak to zrobisz w parę chwil.
 </Callout>
 
@@ -174,8 +176,8 @@ Po kolei:
 5. **_Query String_** - nie ruszam
 6. **_Body Type_** - zostawiam domyślne **_Raw_**
 7. **_Content Type_** - wybieram **_JSON_**
-8. **_Request Content_** - kopiuję z <a href="https://docs.infakt.pl/#6fe35880-014f-4890-bf18-bf373899ca2a" target="_blank_">dokumentacji Infaktu</a> **_body_** zapytania. Interesujące mnie dane podmieniam na informacje otrzymane z Notion (po kliknięciu w miejsce gdzie wklejasz kod pojawi się okienko ze wszystkimi dostępnymi danymi). W moim przypadku interesuje mnie **_client_company_name_** gdzie dostarczam nazwę klienta z pola **_Rollup_** (opisuję to szczegółowo kawałek wyżej) oraz **_name_**, **_net_price_** i **_unit\_\_net_price_** z tablicy **_services_**
-9. **_Parse response_** - **WAŻE!** Zaznaczamy **_Yes_**, bo dzięki temu mogę ominąć dodanie w Make dodatkowego modułu **_JSON_**. W kolejnym module od razu będę mieli dostęp do potrzebnych danych.
+8. **_Request Content_** - kopiuję z <a href="https://docs.infakt.pl/#6fe35880-014f-4890-bf18-bf373899ca2a" target="_blank_">dokumentacji Infaktu</a> **_body_** zapytania. Interesujące mnie dane podmieniam na informacje otrzymane z Notion (po kliknięciu w miejsce gdzie wklejasz kod pojawi się okienko ze wszystkimi dostępnymi danymi). W moim przypadku interesuje mnie **_client_company_name_** gdzie dostarczam nazwę klienta z pola **_Rollup_** (opisuję to szczegółowo kawałek wyżej) oraz **_name_**, **_net_price_** i **_unit_net_price_** z tablicy **_services_**
+9. **_Parse response_** - **WAŻE!** Zaznaczamy **_Yes_**, bo dzięki temu mogę ominąć dodanie w Make dodatkowego modułu **_JSON_**. W kolejnym module od razu mam dostęp do potrzebnych danych.
 
 <BlogPostImage
   src={makeHttpCreate}
