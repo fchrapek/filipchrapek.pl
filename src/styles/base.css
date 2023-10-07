@@ -5,9 +5,9 @@
 @layer base {
   :root,
   html[data-theme="light"] {
-    --color-fill: 242, 242, 242;
+    --color-fill: 250, 250, 250;
     --color-text-base: 36, 36, 36;
-    --color-text-secondary: 107, 107, 107;
+    --color-text-secondary: 100, 100, 100;
     --color-accent: 247, 215, 173;
     --color-card: 230, 230, 230;
     --color-card-muted: 205, 205, 205;
@@ -41,7 +41,7 @@
   h1, h2{
     @apply tracking-tighter;
   }
-  h3, h4, h5, p {
+  h3, h4, h5 {
     @apply tracking-tight;
   }
   a {
@@ -64,7 +64,7 @@
   }
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base
-    prose-p:!text-skin-base sm:prose-p:!text-lg prose-p:!text-[#595959]
+    prose-p:!text-skin-base sm:prose-p:!text-lg prose-p:!text-skin-secondary
     prose-a:!text-skin-base prose-a:!decoration-dashed prose-a:underline-offset-8
     hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent
     prose-blockquote:!font-normal 
@@ -181,5 +181,5 @@
 }
 
 .callout p {
-  @apply opacity-80 first:mt-0 last:mb-0;
+  @apply first:mt-0 last:mb-0;
 }
