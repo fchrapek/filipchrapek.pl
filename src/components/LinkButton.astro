@@ -9,7 +9,7 @@ export interface Props {
   rel?: string;
 }
 
-const { href, className, ariaLabel, title, disabled = false, target = "self", rel } = Astro.props;
+const { href, className, ariaLabel, title, disabled = false, target = "_self", rel } = Astro.props;
 ---
 
 <a
