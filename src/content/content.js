@@ -10,9 +10,9 @@ export const strings = {
     skipToContent: "Przejdź do treści",
     search: "Szukaj",
     goBack: "Powrót",
-    next: "Nowsze",
-    prev: "Starsze",
-    postedOn: "Opublikowano"
+    next: "Starsze",
+    prev: "Nowsze",
+    postedOn: "Opublikowano",
   },
   homepage: {
     heading: "freelance powoli",
@@ -29,12 +29,12 @@ export const strings = {
   },
   notFound: {
     pageNotFound: "Niczego tutaj nie ma :(",
-    goBackHome: "Wróć do strony głównej"
+    goBackHome: "Wróć do strony głównej",
   },
   blogPost: {
     tableOfContents: "Spis treści",
     openTableOfContents: "Otwórz spis treści",
-  }
+  },
 };
 
 export const slugs = {
