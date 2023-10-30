@@ -8,7 +8,7 @@ export interface Props {
   figcaption?: string;
 }
 
-const { src, alt, className, figcaption } = Astro.props;
+const { src, alt, className = "blog-post-image", figcaption } = Astro.props;
 ---
 
 <figure class="blog-post-wrapper">
@@ -24,7 +24,71 @@ const { src, alt, className, figcaption } = Astro.props;
     @apply mx-auto text-center sm:!my-12;
   }
 
+  .blog-post-wrapper img:hover {
+    cursor: zoom-in;
+  }
+
+  .blog-post-wrapper.magnify img {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 1200px;
+    z-index: 2;
+    max-height: 1800px;
+    object-fit: contain;
+  }
+
+  .blog-post-wrapper.magnify img:hover {
+    cursor: auto;
+  }
+
+  .blog-post-wrapper.magnify:after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+
+  body.magnify {
+    cursor: zoom-out;
+    overflow: hidden;
+    height: 100%;
+  }
+
   figcaption {
-    @apply max-w-lg mx-auto;
+    @apply mx-auto max-w-lg;
   }
 </style>
+
+<script>
+  function magifyImages() {
+    const figures = document.querySelectorAll(".blog-post-wrapper");
+
+    figures.forEach(figure => {
+      const image = figure.querySelector(".blog-post-wrapper img");
+
+      image.addEventListener("click", function (e) {
+        e.stopPropagation(); // Prevent the event from bubbling up to the document
+
+        figures.forEach(fig => fig.classList.remove("magnify"));
+
+        figure.classList.add("magnify");
+        document.body.classList.add("magnify");
+        document.documentElement.style.overflow = "hidden";
+      });
+    });
+
+    document.addEventListener("click", function () {
+      figures.forEach(figure => figure.classList.remove("magnify"));
+      document.body.classList.remove("magnify");
+      document.documentElement.style.overflow = "auto";
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", magifyImages);
+  document.addEventListener("astro:after-swap", magifyImages);
+</script>
