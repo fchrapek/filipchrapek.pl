@@ -4,7 +4,7 @@ export const SITE: Site = {
   website: "https://filipchrapek.pl/",
   author: "Filip Chrapek",
   desc: "Filip Chrapek – web developer, designer, freelancer. Promuję freelance zrównoważony, pozwalający skutecznie realizować się w tym trybie długoterminowo, z poszanowaniem siebie i swoich klientów",
-  title: "Filip Chrapek - freelance powoli",
+  title: "Filip Chrapek | Freelance powoli",
   ogImage: "og-image.png",
   lightAndDarkMode: true,
   postPerPage: 6,
