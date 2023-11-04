@@ -28,15 +28,19 @@ const { src, alt, className = "blog-post-image", figcaption } = Astro.props;
     cursor: zoom-in;
   }
 
+  .blog-post-wrapper.magnify {
+  }
+
   .blog-post-wrapper.magnify img {
     position: fixed;
     left: 50%;
+    width: auto;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 90vw;
+    height: auto;
+    max-height: 90vh;
     max-width: 1200px;
     z-index: 2;
-    max-height: 1800px;
     object-fit: contain;
   }
 

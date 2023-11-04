@@ -38,14 +38,17 @@
   footer {
     @apply mx-auto max-w-[43rem] px-4;
   }
-  h1, h2{
+  h1,
+  h2 {
     @apply tracking-tighter;
   }
-  h3, h4, h5 {
+  h3,
+  h4,
+  h5 {
     @apply tracking-tight;
   }
   h4 {
-    @apply sm:text-lg
+    @apply sm:text-lg;
   }
   a {
     @apply outline-2 outline-offset-1 outline-skin-fill
@@ -67,24 +70,24 @@
   }
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base
-    prose-p:!text-skin-base sm:prose-p:!text-lg prose-p:!text-skin-secondary
-    prose-a:!text-skin-base prose-a:!decoration-dashed prose-a:underline-offset-8
-    hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent
-    prose-blockquote:!font-normal 
-    prose-figcaption:!text-skin-base prose-figcaption:opacity-70
-    prose-strong:!text-skin-base
+    prose-p:!text-skin-base prose-p:!text-skin-secondary prose-a:!text-skin-base
+    prose-a:!decoration-dashed prose-a:underline-offset-8 hover:prose-a:text-skin-accent
+    prose-blockquote:!border-l-skin-accent prose-blockquote:!font-normal
+    prose-figcaption:!text-skin-base 
+    prose-figcaption:opacity-70 prose-strong:!text-skin-base
+    prose-code:rounded
 
 
-    prose-code:rounded prose-code:bg-skin-card
-    prose-code:bg-opacity-75 prose-code:p-1 prose-code:!text-skin-base
-    prose-code:before:!content-[''] prose-code:after:!content-['']
-    prose-pre:!text-skin-base prose-ol:!text-skin-secondary sm:prose-ol:!text-lg
-    prose-ul:overflow-x-clip prose-ul:!text-skin-secondary sm:prose-ul:!text-lg prose-li:marker:!text-skin-base
-    prose-table:text-skin-base prose-th:border
-    prose-th:border-skin-line prose-td:border
-    prose-td:border-skin-line prose-img:mx-auto
-    prose-img:!mt-2 prose-img:border-2
-    prose-img:border-skin-line prose-hr:!border-skin-line;
+    prose-code:bg-skin-card prose-code:bg-opacity-75
+    prose-code:p-1 prose-code:!text-skin-base prose-code:before:!content-['']
+    prose-code:after:!content-[''] prose-pre:!text-skin-base
+    prose-ol:!text-skin-secondary prose-ul:overflow-x-clip prose-ul:!text-skin-secondary
+    prose-li:marker:!text-skin-base prose-table:text-skin-base prose-th:border prose-th:border-skin-line
+    prose-td:border prose-td:border-skin-line
+    prose-img:mx-auto prose-img:!mt-2
+    prose-img:border-2 prose-img:border-skin-line
+    prose-hr:!border-skin-line sm:prose-p:!text-lg
+    sm:prose-ol:!text-lg sm:prose-ul:!text-lg;
   }
   .prose a {
     @apply break-words hover:!text-skin-accent;
