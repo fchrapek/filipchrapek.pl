@@ -11,6 +11,8 @@ export interface Props {
   description?: string;
   ogImage?: string;
   canonicalURL?: string;
+  pubDatetime?: Date;
+  modDatetime?: Date;
 }
 
 const {
@@ -19,6 +21,8 @@ const {
   description = SITE.desc,
   ogImage = SITE.ogImage,
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+  pubDatetime,
+  modDatetime,
 } = Astro.props;
 
 const socialImageURL = new URL(
@@ -55,6 +59,24 @@ const socialImageURL = new URL(
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
+
+    <!-- Article Published/Modified time -->
+    {
+      pubDatetime && (
+        <meta
+          property="article:published_time"
+          content={pubDatetime.toISOString()}
+        />
+      )
+    }
+    {
+      modDatetime && (
+        <meta
+          property="article:modified_time"
+          content={modDatetime.toISOString()}
+        />
+      )
+    }
 
     <meta name="theme-color" content="" />
 

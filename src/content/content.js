@@ -13,6 +13,7 @@ export const strings = {
     next: "Starsze",
     prev: "Nowsze",
     postedOn: "Opublikowano",
+    updatedOn: "Ostatni update",
   },
   homepage: {
     heading: "freelance powoli",
