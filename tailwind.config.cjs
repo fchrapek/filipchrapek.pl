@@ -11,6 +11,11 @@ function withOpacity(variableName) {
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
+    extend: {
+      opacity: {
+       '3.5': '0.035',
+      }
+    },
     // Remove the following screen breakpoint or add other breakpoints
     // if one breakpoint is not enough for you
     screens: {
