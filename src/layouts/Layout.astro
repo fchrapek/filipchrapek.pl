@@ -6,6 +6,7 @@ import { ViewTransitions } from "astro:transitions";
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 export interface Props {
+  siteUrl?: string;
   title?: string;
   author?: string;
   description?: string;
@@ -16,6 +17,7 @@ export interface Props {
 }
 
 const {
+  siteUrl = SITE.website,
   title = SITE.title,
   author = SITE.author,
   description = SITE.desc,
@@ -30,28 +32,48 @@ const socialImageURL = new URL(
   Astro.url.origin
 ).href;
 
+const isBlogPost = canonicalURL.startsWith(`${siteUrl}/wpisy/`);
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": title,
-  "image": ogImage,  
-  "author": {
-    "@type": "Person",
-    "name": "Filip Chrapek",
-    "url": canonicalURL,
-  },  
-  "publisher": {
-    "@type": "Person",
-    "name": "Filip Chrapek",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://filipchrapek.pl/favicon.svg"
-    }
-  },
-  "datePublished": pubDatetime?.toISOString().substring(0, 10),
-  "dateModified": modDatetime?.toISOString().substring(0, 10),
-};
+const schema = isBlogPost
+  ? {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": canonicalURL
+      },
+    "headline": title,
+    "description": description,
+    "image": ogImage,  
+    "author": {
+      "@type": "Person",
+      "name": author,
+      "url": siteUrl,
+    },  
+    "publisher": {
+      "@type": "Person",
+      "name": "Filip Chrapek",
+    },
+    "datePublished": pubDatetime?.toISOString().substring(0, 10),
+    "dateModified": modDatetime?.toISOString().substring(0, 10),
+  } : {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": title,
+    "description": description,
+    "image": ogImage,  
+    "author": {
+      "@type": "Person",
+      "name": author,
+      "url": siteUrl,
+    },  
+    "publisher": {
+      "@type": "Person",
+      "name": "Filip Chrapek",
+    },
+    "datePublished": pubDatetime?.toISOString().substring(0, 10),
+    "dateModified": modDatetime?.toISOString().substring(0, 10),
+  };
 ---
 
 <!doctype html>
