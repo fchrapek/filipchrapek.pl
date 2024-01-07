@@ -32,7 +32,7 @@ const socialImageURL = new URL(
   Astro.url.origin
 ).href;
 
-const isBlogPost = canonicalURL.startsWith(`${siteUrl}/wpisy/`);
+const isBlogPost = /^https:\/\/filipchrapek\.pl\/wpisy\//.test(canonicalURL);
 
 const schema = isBlogPost
   ? {
