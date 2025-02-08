@@ -1,13 +1,6 @@
 ---
 import { Image } from "astro:assets";
 
-export interface Props {
-  src: string;
-  alt?: string;
-  className?: string;
-  figcaption?: string;
-}
-
 const { src, alt, className = "blog-post-image", figcaption } = Astro.props;
 ---
 

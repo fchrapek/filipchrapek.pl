@@ -1,32 +1,21 @@
 ---
-export interface Props {
-  href: string;
-  className?: string;
-  ariaLabel?: string;
-  title?: string;
-  disabled?: boolean;
-  target?: string;
-  rel?: string;
-}
-
-const { href, className, ariaLabel, title, disabled = false, target = "_self", rel } = Astro.props;
+const {
+  href,
+  className = "",
+  ariaLabel,
+  title,
+  disabled = false,
+} = Astro.props;
 ---
 
-<a
-  href={disabled ? "#" : href}
-  tabindex={disabled ? "-1" : "0"}
-  class={`group inline-block ${className}`}
-  aria-label={ariaLabel}
-  title={title}
-  aria-disabled={disabled}
-  target={target}
-  rel={rel}
->
-  <slot />
-</a>
-
-<style>
-  a {
-    @apply hover:text-skin-accent;
-  }
-</style>
+{
+  disabled ? (
+    <span class="" title={title} aria-disabled={disabled}>
+      <slot />
+    </span>
+  ) : (
+    <a {href} class="" aria-label={ariaLabel} title={title}>
+      <slot />
+    </a>
+  )
+}

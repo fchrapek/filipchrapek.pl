@@ -1,0 +1,30 @@
+---
+import { LOGO_IMAGE, SITE } from "@config";
+// import Hr from "./Hr.astro";
+import { Nav } from "@components";
+import styles from "./Header.module.scss";
+
+const { activeNav } = Astro.props;
+---
+
+<header class={styles.header}>
+  <a class="sr-only" href="#main-content">Skip to content</a>
+  <div class={styles.header__wrapper}>
+    <a href="/" class={styles.header__logo}>
+      {
+        LOGO_IMAGE.enable ? (
+          <img
+            src={`/assets/${LOGO_IMAGE.svg ? "logo.svg" : "logo.png"}`}
+            alt={SITE.title}
+            width={LOGO_IMAGE.width}
+            height={LOGO_IMAGE.height}
+          />
+        ) : (
+          SITE.title
+        )
+      }
+    </a>
+    <Nav activeNav={activeNav} />
+  </div>
+  <!-- <Hr /> -->
+</header>

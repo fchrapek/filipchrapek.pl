@@ -1,30 +1,32 @@
 ---
-import { SITE, LANG } from "@config";
+import { LOCALE, SITE } from "@config";
 import "@styles/base.css";
 import { ViewTransitions } from "astro:transitions";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 export interface Props {
-  siteUrl?: string;
   title?: string;
   author?: string;
+  profile?: string;
   description?: string;
   ogImage?: string;
   canonicalURL?: string;
   pubDatetime?: Date;
-  modDatetime?: Date;
+  modDatetime?: Date | null;
+  scrollSmooth?: boolean;
 }
 
 const {
-  siteUrl = SITE.website,
   title = SITE.title,
   author = SITE.author,
+  profile = SITE.profile,
   description = SITE.desc,
   ogImage = SITE.ogImage,
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
   pubDatetime,
   modDatetime,
+  scrollSmooth = false,
 } = Astro.props;
 
 const socialImageURL = new URL(
@@ -32,52 +34,28 @@ const socialImageURL = new URL(
   Astro.url.origin
 ).href;
 
-const isBlogPost = /^https:\/\/filipchrapek\.pl\/wpisy\//.test(canonicalURL);
-
-const schema = isBlogPost
-  ? {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": canonicalURL
-      },
-    "headline": title,
-    "description": description,
-    "image": ogImage,  
-    "author": {
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: `${title}`,
+  image: `${socialImageURL}`,
+  datePublished: `${pubDatetime?.toISOString()}`,
+  ...(modDatetime && { dateModified: modDatetime.toISOString() }),
+  author: [
+    {
       "@type": "Person",
-      "name": author,
-      "url": siteUrl,
-    },  
-    "publisher": {
-      "@type": "Person",
-      "name": "Filip Chrapek",
+      name: `${author}`,
+      url: `${profile}`,
     },
-    "datePublished": pubDatetime?.toISOString().substring(0, 10),
-    "dateModified": modDatetime?.toISOString().substring(0, 10),
-  } : {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "headline": title,
-    "description": description,
-    "image": ogImage,  
-    "author": {
-      "@type": "Person",
-      "name": author,
-      "url": siteUrl,
-    },  
-    "publisher": {
-      "@type": "Person",
-      "name": "Filip Chrapek",
-    },
-    "datePublished": pubDatetime?.toISOString().substring(0, 10),
-    "dateModified": modDatetime?.toISOString().substring(0, 10),
-  };
+  ],
+};
 ---
 
 <!doctype html>
-<html lang={LANG}>
+<html
+  lang=`${LOCALE.lang ?? "en"}`
+  class={`${scrollSmooth && "scroll-smooth"}`}
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -98,13 +76,6 @@ const schema = isBlogPost
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={socialImageURL} />
-
     <!-- Article Published/Modified time -->
     {
       pubDatetime && (
@@ -123,7 +94,32 @@ const schema = isBlogPost
       )
     }
 
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={socialImageURL} />
+
+    <!-- Google JSON-LD Structured data -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+      rel="preload"
+      as="style"
+      onload="this.onload=null; this.rel='stylesheet';"
+      crossorigin
+    />
+
     <meta name="theme-color" content="" />
+
     {
       // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
       // include google-site-verification tag in the heading
@@ -138,8 +134,7 @@ const schema = isBlogPost
 
     <ViewTransitions />
 
-    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
-    <script is:inline src="/toggle-theme.js"></script>
+    <script is:inline src="/toggle-theme.js" async></script>
   </head>
   <body>
     <slot />
