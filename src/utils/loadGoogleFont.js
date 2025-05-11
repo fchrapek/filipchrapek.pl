@@ -1,16 +1,4 @@
-import type { FontStyle, FontWeight } from "satori";
-
-export type FontOptions = {
-  name: string;
-  data: ArrayBuffer;
-  weight: FontWeight | undefined;
-  style: FontStyle | undefined;
-};
-
-async function loadGoogleFont(
-  font: string,
-  text: string
-): Promise<ArrayBuffer> {
+async function loadGoogleFont(font, text) {
   const API = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(text)}`;
 
   const css = await (
@@ -34,15 +22,11 @@ async function loadGoogleFont(
     throw new Error("Failed to download dynamic font. Status: " + res.status);
   }
 
-  const fonts: ArrayBuffer = await res.arrayBuffer();
+  const fonts = await res.arrayBuffer();
   return fonts;
 }
 
-async function loadGoogleFonts(
-  text: string
-): Promise<
-  Array<{ name: string; data: ArrayBuffer; weight: number; style: string }>
-> {
+async function loadGoogleFonts(text) {
   const fontsConfig = [
     {
       name: "IBM Plex Mono",

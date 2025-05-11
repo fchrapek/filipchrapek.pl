@@ -1,8 +1,9 @@
 import satori from "satori";
 import { SITE } from "@config";
-import loadGoogleFonts, { type FontOptions } from "../loadGoogleFont";
+import loadGoogleFonts from "../loadGoogleFont";
 
 export default async () => {
+  const fonts = await loadGoogleFonts(SITE.title);
   return satori(
     <div
       style={{
@@ -29,19 +30,6 @@ export default async () => {
           width: "88%",
           height: "80%",
         }}
-      />
-
-      <div
-        style={{
-          border: "4px solid #000",
-          background: "#fefbfb",
-          borderRadius: "4px",
-          display: "flex",
-          justifyContent: "center",
-          margin: "2rem",
-          width: "88%",
-          height: "80%",
-        }}
       >
         <div
           style={{
@@ -53,34 +41,26 @@ export default async () => {
             height: "90%",
           }}
         >
-          <div
+          <p
             style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "90%",
-              maxHeight: "90%",
+              fontSize: 72,
+              fontWeight: "bold",
+              maxHeight: "84%",
               overflow: "hidden",
-              textAlign: "center",
             }}
           >
-            <p style={{ fontSize: 72, fontWeight: "bold" }}>{SITE.title}</p>
-            <p style={{ fontSize: 28 }}>{SITE.desc}</p>
-          </div>
-
+            {SITE.title}
+          </p>
           <div
             style={{
               display: "flex",
-              justifyContent: "flex-end",
+              justifyContent: "flex-start",
               width: "100%",
               marginBottom: "8px",
               fontSize: 28,
             }}
           >
-            <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-              {new URL(SITE.website).hostname}
-            </span>
+            <span>by {SITE.author}</span>
           </div>
         </div>
       </div>
@@ -88,10 +68,7 @@ export default async () => {
     {
       width: 1200,
       height: 630,
-      embedFont: true,
-      fonts: (await loadGoogleFonts(
-        SITE.title + SITE.desc + SITE.website
-      )) as FontOptions[],
+      fonts,
     }
   );
 };

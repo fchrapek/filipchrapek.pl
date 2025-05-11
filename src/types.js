@@ -1,5 +1,7 @@
-import type socialIcons from "@assets/socialIcons";
+// This file is kept for documentation purposes only
+// The types below are commented out since they're not needed in JavaScript
 
+/*
 export type Site = {
   website: string;
   author: string;
@@ -13,15 +15,16 @@ export type Site = {
   scheduledPostMargin: number;
   showArchives?: boolean;
   editPost?: {
-    url?: URL["href"];
+    url?: string;
     text?: string;
     appendFilePath?: boolean;
   };
 };
 
 export type SocialObjects = {
-  name: keyof typeof socialIcons;
+  name: string;
   href: string;
   active: boolean;
   linkTitle: string;
 }[];
+*/

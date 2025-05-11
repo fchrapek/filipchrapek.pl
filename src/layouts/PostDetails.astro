@@ -64,9 +64,9 @@ const nextPost =
 <Layout {...layoutProps}>
   <Header />
 
-  <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
+  <div class="">
     <button
-      class="focus-outline mb-2 mt-8 flex hover:opacity-75"
+      class=""
       onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
     >
       <svg xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ const nextPost =
     </button>
   </div>
   <main id="main-content">
-    <h1 transition:name={slugifyStr(title)} class="post-title inline-block">{title}</h1>
+    <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
     <Datetime
       pubDatetime={pubDatetime}
       modDatetime={modDatetime}
@@ -86,7 +86,7 @@ const nextPost =
       editPost={editPost}
       postId={post.id}
     />
-    <article id="article" class="prose mx-auto mt-8 max-w-3xl">
+    <article id="article" class="">
       <Content />
     </article>
 
@@ -95,11 +95,11 @@ const nextPost =
     </ul>
 
     <div
-      class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
+      class=""
     >
       <button
         id="back-to-top"
-        class="focus-outline whitespace-nowrap py-1 hover:opacity-75"
+        class=""
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="rotate-90">
           <path
@@ -112,15 +112,15 @@ const nextPost =
       <ShareLinks />
     </div>
 
-    <hr class="my-6 border-dashed" />
+    <hr class="" />
 
     <!-- Previous/Next Post Buttons -->
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+    <div class="">
       {
         prevPost && (
           <a
             href={`/posts/${prevPost.slug}`}
-            class="flex w-full gap-1 hover:opacity-75"
+            class=""
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +132,7 @@ const nextPost =
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left flex-none"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"
             >
               <>
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -141,7 +141,7 @@ const nextPost =
             </svg>
             <div>
               <span>Previous Post</span>
-              <div class="text-sm text-skin-accent/85">{prevPost.title}</div>
+              <div class="">{prevPost.title}</div>
             </div>
           </a>
         )
@@ -150,11 +150,11 @@ const nextPost =
         nextPost && (
           <a
             href={`/posts/${nextPost.slug}`}
-            class="flex w-full justify-end gap-1 text-right hover:opacity-75 sm:col-start-2"
+            class=""
           >
             <div>
               <span>Next Post</span>
-              <div class="text-sm text-skin-accent/85">{nextPost.title}</div>
+              <div class="">{nextPost.title}</div>
             </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +166,7 @@ const nextPost =
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right flex-none"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
             >
               <>
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />

@@ -1,5 +1,4 @@
-import type { APIRoute } from "astro";
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import { generateOgImageForPost } from "@utils/generateOgImages";
 import { slugifyStr } from "@utils/slugify";
 
@@ -14,7 +13,7 @@ export async function getStaticPaths() {
   }));
 }
 
-export const GET: APIRoute = async ({ props }) =>
-  new Response(await generateOgImageForPost(props as CollectionEntry<"blog">), {
+export const GET = async ({ props }) =>
+  new Response(await generateOgImageForPost(props), {
     headers: { "Content-Type": "image/png" },
   });

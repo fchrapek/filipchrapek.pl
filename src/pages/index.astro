@@ -8,14 +8,13 @@ import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SITE } from "@config";
-import {content, slugs} from "@content/content";
+import { content, slugs } from "@content/content";
 
 const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
-
 ---
 
 <Layout>
@@ -40,13 +39,11 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <span class="sr-only">RSS Feed</span>
       </a>
 
-      <p>
-       do zmiany
-      </p>
+      <p>do zmiany</p>
       <p>
         Read the blog posts or check
         <LinkButton
-          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+          className=""
           href="https://github.com/satnaing/astro-paper#readme"
         >
           README

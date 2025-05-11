@@ -1,6 +1,7 @@
-import type { Site, SocialObjects } from "./types";
+// Converted from TypeScript to JavaScript
+import socialIcons from "./assets/socialIcons.js";
 
-export const SITE: Site = {
+export const SITE = {
   website: "https://filipchrapek.pl/", // replace this with your deployed domain
   author: "Filip Chrapek",
   profile: "https://filipchrapek.pl/",
@@ -22,7 +23,7 @@ export const SITE: Site = {
 export const LOCALE = {
   lang: "pl", // html lang code. Set this empty and default will be "en"
   langTag: ["pl-PL"], // BCP 47 Language Tags. Set this empty [] to use the environment default
-} as const;
+};
 
 export const LOGO_IMAGE = {
   enable: true,
@@ -31,7 +32,7 @@ export const LOGO_IMAGE = {
   height: 80,
 };
 
-export const SOCIALS: SocialObjects = [
+export const SOCIALS = [
   {
     name: "Github",
     href: "#",
